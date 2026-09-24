@@ -50,14 +50,15 @@ class receptionist(staff):
 class technician(staff):
     def status(self):
         print(f"{self.name} is prepairing medical equipment for patients operation")
-sara=patient("sara", 21, 65, 101)
-doctor_hannah=doctor("hannah", 10340,"cardiology")
-nurse_jack=nurse("jack", 20547, "emergency")
-receptionist_billy=receptionist("billy", 30895)
-technician_chris=technician("chris", 40975)
-sara.change_rooms(104)
-sara.update_heart_rate(75)
-sara.show_info()
-employees=[receptionist_billy,doctor_hannah,nurse_jack,technician_chris]
-for employee in employees:
-    employee.status()       
+if __name__ == "__main__":
+    sara=patient("sara", 21, 65, 101)
+    doctor_hannah=doctor("hannah", 10340,"cardiology")
+    nurse_jack=nurse("jack", 20547, "emergency")
+    receptionist_billy=receptionist("billy", 30895)
+    technician_chris=technician("chris", 40975)
+    sara.change_rooms(104)
+    sara.update_heart_rate(75)
+    sara.show_info()
+    employees=[receptionist_billy,doctor_hannah,nurse_jack,technician_chris]
+    for employee in employees:
+        employee.status()       
